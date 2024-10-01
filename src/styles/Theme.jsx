@@ -7,7 +7,7 @@ export const Theme = {
   fonts: {
     mainTitle: css`
       font-family: "Noto Sans KR", sans-serif;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 54px;
     `,
     heading: css`

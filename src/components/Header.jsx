@@ -1,15 +1,18 @@
 import styled from "styled-components";
 import { ReactComponent as Logo } from "../images/airplaneLogo.svg";
 import { ReactComponent as Logout } from "../images/logoutButton.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <HeaderContent>
       <WholeContainer>
-        <LogoComponent>
-          <LogoText>비행기레터</LogoText>
-          <Logo />
-        </LogoComponent>
+        <Link to="/">
+          <LogoComponent>
+            <LogoText>비행기레터</LogoText>
+            <Logo />
+          </LogoComponent>
+        </Link>
         <Logout />
       </WholeContainer>
     </HeaderContent>
@@ -21,7 +24,7 @@ const HeaderContent = styled.div`
   position: fixed;
   z-index: 1100;
   width: 100vw;
-  height: 110px;
+  height: 10.185vh;
   align-items: center;
   background-color: white;
   border-bottom: 1px solid #a9a9a9;

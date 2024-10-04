@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import InputBox from "../components/InputBox";
 import BigButton from "../components/BigButton";
 
@@ -16,8 +17,12 @@ const Login = () => {
             inputText="비밀번호"
             explainText="영문과 숫자, 특수기호를 조합하여 8~14글자 미만으로 입력하여 주세요."
           />
-          <BigButton buttonName="로그인" />
-          <JoinButton>회원가입</JoinButton>
+          <ButtonContainer>
+            <BigButton buttonName="로그인" />
+            <Link to="/join">
+              <JoinButton>회원가입</JoinButton>
+            </Link>
+          </ButtonContainer>
         </LoginBox>
       </Container>
     </LoginPage>
@@ -52,9 +57,17 @@ const Title = styled.p`
   margin: 10%;
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 6%;
+`;
+
 const JoinButton = styled.p`
   ${({ theme }) => theme.fonts.subTitle};
-  margin: 2%;
+  color: ${({ theme }) => theme.colors.gray};
+  margin-top: 20%;
 `;
 
 export default Login;

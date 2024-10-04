@@ -27,6 +27,7 @@ const InputBoxContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
+  margin: 1%;
 `;
 
 const InnerContainer = styled.div`
